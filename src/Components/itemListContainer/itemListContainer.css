@@ -1,4 +1,14 @@
 .saludos{ 
-    color: white;
+    color: black;
     text-align: center;
+}
+.clase-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.clase-gift {
+    width: 6rem;
 }

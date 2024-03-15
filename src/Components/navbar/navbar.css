@@ -1,21 +1,6 @@
-.navContainer{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 10px;
-  }
-  .secciones{
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
-  }
-  .link{
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-  }
-  .logo{
-    width: 8rem;
-  }
+.navv{
+  margin-left: 20px;
+}
+.texto{
+  text-decoration: none;
+}

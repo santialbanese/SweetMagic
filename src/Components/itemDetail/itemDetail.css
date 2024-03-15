@@ -1,0 +1,34 @@
+.item-detail {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.274);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.item-detail h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; 
+}
+
+.item-detail img {
+    max-width: 100%; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+}
+
+.item-detail p {
+    margin-bottom: 10px; 
+}
+
+.item-detail p.price {
+    font-weight: bold; 
+}
+
+.item-detail{
+    margin-top: 20px; 
+}
+.item-count{
+    margin-top: 20px; 
+}

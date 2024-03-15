@@ -1,20 +1,35 @@
 import "./navbar.css"
-import Carrito from "../carrito/Carrito.jsx"
 import logo from "../../multimedia/logo2png.png"
-const Navbar = () =>{
-    return (
-        <nav className="navContainer">
-            <a className="link" href="/"> 
-                <img alt="logo" src={logo} className="logo"/> 
-            </a>
-            <div className="secciones">
-              <a className="link" href="/">Nuevos</a>
-              <a className="link" href="/">Mas vendidos</a>
-              <a className="link" href="/">Ofertas</a>
-            </div>
-            <Carrito></Carrito>
-        </nav>
-    )
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Carrito from '../carrito/Carrito'
+import { NavLink } from "react-router-dom";
+
+function Navbar1() {
+  return ( 
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand as={NavLink} to='/' ><img src={logo} alt='logo' style={{width:'7rem'}}/></Navbar.Brand>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto navv">
+            <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown.Item as={NavLink} to='/categories/Nuevos'>Nuevos</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categories/Mas vendidos'>
+                Mas vendidos
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categories/Ofertas'>Ofertas</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <NavLink className="texto" to='/cart'>
+            <Carrito/>
+          </NavLink>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar;
+export default Navbar1;
