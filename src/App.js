@@ -1,13 +1,17 @@
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "./Components/Navbar/Navbar.jsx"
-import {ItemListContainer} from "./Components/itemListContainer/ItemListContainer.jsx"
+import Navbar from "./Components/Navbar/Navbar.jsx";
+import {ItemListContainer} from "./Components/itemListContainer/ItemListContainer.jsx";
 import ItemDetailContainer from "./Components/itemDetailContainer/ItemDetailContainer.jsx";
+import Form from "./Components/form/Form.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from './Components/cart/Cart';
+import { CartProvider } from './context/CartContext.jsx'
+
 function App() {
   const saludo2 = "bienvenidos a mi app de venta de bombones."
   return (
+    <CartProvider>
       <BrowserRouter>
         <Navbar/>
         <Routes>
@@ -15,8 +19,10 @@ function App() {
           <Route path='/categories/:categoryId' element={<ItemListContainer greeting="categoria:" />} />
           <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/form' element={<Form/>}/>
         </Routes>
       </BrowserRouter>
+    </CartProvider>
   );
 }
 
