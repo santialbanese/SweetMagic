@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import ItemCount from '../itemCount/ItemCount';
 import "./itemDetail.css"
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({producto}) =>{
     const [cantidadAgregada, setCantidadAgregada] = useState(0)
@@ -21,8 +22,8 @@ const ItemDetail = ({producto}) =>{
             <img src={producto.imagen} alt={producto.tipo} className='clase-imagen' />
             <p>{producto.descripcion}</p>
             <p className="price">${producto.precio}</p>
-            { compra ? <button  className='btn btn-success'>Ir al carrito</button> : <ItemCount stock={producto.stock} onAdd={onAdd} className="item-count"/>}
+            { compra ? <Link to={'/cart'}  className='btn btn-success'>Ir al carrito</Link> : <ItemCount stock={producto.stock} onAdd={onAdd} className="item-count"/>}
         </div>
     );
 }
-export default ItemDetail;
+export default ItemDetail; 

@@ -5,33 +5,32 @@ const Form = () => {
     const [email, setEmail] = useState('')
     const [telephone, setTelephone] = useState('')
     const [feedback, setFeedBack] = useState('')
+    const [ValidateEmail, setValidateEmail] = useState('')
 
 
     const enviarDatos = (e) =>{
         e.preventDefault()
-        if(name === '' || email === '' || telephone === ''){
-            alert(' Complete el form')
-            setFeedBack('')
+        if(email !== ValidateEmail){
+            alert('los mails son distintos, ponga el mismo mail en ambos')
         }else{
-
-            console.log(
-                {
-                    nombreCompleto:name,
-                    correo:email,
-                    telefono:telephone
-                }
-                )
-                setFeedBack('Muchas gracias, nos comunicaremos con uds en breve')
+            if(name === '' || email === '' || telephone === ''){
+                alert('Complete el formulario')
+                setFeedBack('')
+            }else{
+    
+                console.log(
+                    {
+                        nombreCompleto:name,
+                        correo:email,
+                        telefono:telephone
+                    }
+                    )
+                    setFeedBack('Muchas gracias, nos comunicaremos con uds en breve')
+            }
         }
+        
     }
 
-    const inputHandler = (e) =>{
-        console.log(e)
-        if('aeiou'.includes(e.key.toLowerCase())){
-            e.preventDefault()
-            alert('no no ')
-        }
-    }
 
     if(feedback!== ''){
         return <p>{feedback}</p>
@@ -45,6 +44,7 @@ const Form = () => {
             <input type='text' placeholder='Nombre Completo' onChange={(e)=>setName(e.target.value)}/>
             <input type='email' placeholder='ejemplo@ejemplo.com' onChange={(e)=>setEmail(e.target.value)}/>
             <input type='number' placeholder='02254-566411' onChange={(e)=>setTelephone(e.target.value)}/>
+            <input type='email' placeholder='repita su correo' onChange={(e)=>setValidateEmail(e.target.value)}/>
             <button type='submit'>Enviar</button>
         </form>
 

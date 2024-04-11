@@ -7,6 +7,7 @@ import Form from "./Components/form/Form.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from './Components/cart/Cart';
 import { CartProvider } from './context/CartContext.jsx'
+import Checkout from './Components/checkout/Checkout.jsx'
 
 function App() {
   const saludo2 = "bienvenidos a mi app de venta de bombones."
@@ -20,6 +21,7 @@ function App() {
           <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/form' element={<Form/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>
