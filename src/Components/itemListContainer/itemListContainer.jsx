@@ -45,5 +45,5 @@ export const ItemListContainer = (props) => {
        ?<h1 className='fst-italic colorCategoria'>{props.texto} {categoryId}</h1>
        :<h1 className='fst-italic text-danger-emphasis'>{props.texto}</h1>}
         <ItemList productos={productos}/>
-    </div>
+    </div>
 }
