@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+#Sweet magic 🛒
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es un ecommerce donde podes comprar bombones de chocolate!
 
-## Available Scripts
+![Mi ecommerce](https://i.postimg.cc/d0VxYfMp/Captura-de-pantalla-1.png)
 
-In the project directory, you can run:
+En Sweet Magic, cada bombón es una obra maestra cuidadosamente elaborada con amor y dedicación. Cada bocado es un viaje a un mundo de dulzura y placer. Nuestra misión es endulzar tus momentos más especiales y convertirlos en experiencias inolvidables.
 
-### `npm start`
+Te ofrecemos una amplia gama de sabores para satisfacer todos los gustos. Desde los clásicos bombones de chocolate negro hasta las combinaciones más exóticas y audaces, cada uno de nuestros dulces es una creación única y deliciosa. Descubre el equilibrio perfecto entre dulzura y sabor en cada colección de bombones que tenemos para ti.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Carrito](https://i.postimg.cc/TPPf4QtY/Captura-de-pantalla-3.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalación 💻
+1. Clone el repositorio
+2. Ejecute npm install para instalar dependencias
+3. Ejecute npm star para levantar el proyecto de manera local
 
-### `npm test`
+### Versión host 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Sweet magic] ()
 
-### `npm run build`
+### Librerias utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-[Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/): utilizada para los estilos de mi app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-[Firebase](https://firebase.google.com/): utilizada como base de datos de mi proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_[React Router Dom](https://reactrouter.com/): libreria de navegacion por rutas
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Desarrollado por Santiago Albanese
