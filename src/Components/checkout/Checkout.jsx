@@ -53,10 +53,10 @@ const Checkout = () => {
     return(
         <div>
             {orderId !== '' ?
-            <div className="mensaje-confirmacion">
-                <h4 className="mensaje-confirmacion-titulo">Generaste tu orden!</h4>
+            <div className="mensajeConfirmacion">
+                <h4 className="mensajeConfirmacionTitulo">Generaste tu orden!</h4>
                 <h5>El id es: {orderId}</h5>
-                <Link to ='/' className="mensaje-confirmacion-enlace">Volver a Home</Link>
+                <Link to ='/' className="mensajeConfirmacionEnlace">Volver a Home</Link>
             </div>
             :
             <div className="formularioCheckout">

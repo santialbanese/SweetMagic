@@ -29,23 +29,30 @@
   .botonCheckout:hover {
     background-color: #0051a8;
   }
-
-  
-
-  .mensaje-confirmacion {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #28a745;
-    border-radius: 5px;
-    background-color: #d4edda;
-    color: #155724;
+.mensajeConfirmacion {
+    border: 1px solid #f5c6cb; 
+    border-radius: 5px; 
+    padding: 20px; 
   }
   
-  .mensaje-confirmacion-titulo {
-    margin-bottom: 10px;
-    color: #155724;
+  .mensajeConfirmacionTitulo {
+    color: #721c24; 
+    font-size: 24px; 
+    margin-bottom: 10px; 
   }
   
-  .mensaje-confirmacion-enlace {
-    color: #007bff;
+  .mensajeConfirmacionEnlace {
+    margin-top: 10px;
+    color: #155724; 
+    text-decoration: none;
+    font-weight: bold; 
+    padding: 5px 10px; 
+    border: 1px solid #155724;
+    border-radius: 3px; 
+    background-color: #d4edda; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .mensajeConfirmacionEnlace:hover {
+    background-color: #a1e2b0; 
   }
