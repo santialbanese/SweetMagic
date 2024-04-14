@@ -14,7 +14,7 @@ function Navbar1() {
         <Navbar.Brand as={NavLink} to='/' ><img src={logo} alt='logo' style={{width:'7rem'}}/></Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navv">
-            <Nav.Link as={NavLink} to='/' style={{ color: 'white' }} >Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to='/' >Inicio</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item as={NavLink} to='/categories/Nuevos'>Nuevos</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/categories/Mas vendidos'>

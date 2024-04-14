@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { Link } from 'react-router-dom'
+import "./checkout.css"; 
 const Checkout = () => {
     const [ValidateEmail, setValidateEmail] = useState('')
     const [user, setUser] = useState({})
@@ -52,21 +53,21 @@ const Checkout = () => {
     return(
         <div>
             {orderId !== '' ?
-            <div>
-                <h4>Generaste tu orden!</h4>
+            <div className="mensaje-confirmacion">
+                <h4 className="mensaje-confirmacion-titulo">Generaste tu orden!</h4>
                 <h5>El id es: {orderId}</h5>
-                <Link to ='/'>Volver a Home</Link>
+                <Link to ='/' className="mensaje-confirmacion-enlace">Volver a Home</Link>
             </div>
             :
-            <div>
+            <div className="formularioCheckout">
                 <h4>Completa con tus datos</h4>
                 <form className='d-flex flex-column align-items-center' onSubmit={enviarDatos}>
-                    <input name='name' placeholder='Ingrese su nombre' type='text' onChange={userData}/>
-                    <input name='lastname' placeholder='Ingrese su apellido' type='text' onChange={userData} />
-                    <input name='phone' placeholder='Ingrese su telefono' type='tel' onChange={userData}/>
-                    <input name='email' placeholder='Ingrese su correo' type='email' onChange={userData}/>
-                    <input name='second-email' placeholder='Repita su correo'type='email' onChange={(e)=> setValidateEmail(e.target.value)}/>
-                    <button type='submit'>Enviar</button>
+                    <input className="inputCheckout" name='name' placeholder='Ingrese su nombre' type='text' onChange={userData}/>
+                    <input className="inputCheckout" name='lastname' placeholder='Ingrese su apellido' type='text' onChange={userData} />
+                    <input className="inputCheckout" name='phone' placeholder='Ingrese su telefono' type='tel' onChange={userData}/>
+                    <input className="inputCheckout" name='email' placeholder='Ingrese su correo' type='email' onChange={userData}/>
+                    <input className="inputCheckout" name='second-email' placeholder='Repita su correo'type='email' onChange={(e)=> setValidateEmail(e.target.value)}/>
+                    <button className="botonCheckout"  type='submit'>Enviar</button>
                 </form>
             </div>}
         </div>

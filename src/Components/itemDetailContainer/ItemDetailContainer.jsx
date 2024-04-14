@@ -7,6 +7,7 @@ import { db } from "../../services/firebase"
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [cargando, setCargando]= useState(false)
+    const [validateItem, setValidateItem] = useState(false)
     const {itemId} = useParams()
 
     useEffect(()=>{
@@ -14,7 +15,13 @@ const ItemDetailContainer = () => {
         const collectionProd = collection(db, "productos")
         const referenciaDoc = doc(collectionProd, itemId)
         getDoc(referenciaDoc)
-        .then((res)=> setProducto({id:res.id, ...res.data()}))
+        .then((res)=> {
+            if(res.data()){
+                setProducto({id: res.id, ...res.data()})
+              }else{
+                setValidateItem(true)
+              }
+        }) 
         .catch((error)=> console.log(error))
         .finally(()=> setCargando(false))
     },[itemId])
@@ -29,7 +36,7 @@ const ItemDetailContainer = () => {
     else{
         return(
             <div>
-                <ItemDetail producto={producto}/>
+                  {validateItem ? <p>El producto no existe</p> : <ItemDetail producto={producto}/>} 
             </div>
 
         )
