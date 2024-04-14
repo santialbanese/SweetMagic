@@ -1,6 +1,15 @@
 .navv{
-  margin-left: 20px;
-}
-.texto{
-  text-decoration: none;
-}
+    margin-left: 20px;
+  }
+  .texto{
+    text-decoration: none;
+  }
+  .bg-body-tertiary{
+    background-color: #443424;
+  }
+  .fondoNav{
+    background-color: #443424;
+  }
+  .colorIC{
+    color: #fff;
+  }

@@ -1,0 +1,25 @@
+.claseCart {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .claseCart h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .botonCart {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botonCart:hover {
+    background-color: #218838;
+  }

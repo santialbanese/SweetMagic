@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { getOneProduct } from "../../mock/FakeApi"
 import ItemDetail from "../itemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { collection, doc, getDoc } from "firebase/firestore"
@@ -10,15 +9,6 @@ const ItemDetailContainer = () => {
     const [cargando, setCargando]= useState(false)
     const {itemId} = useParams()
 
-    /* useEffect(()=>{
-        setCargando(true)
-        getOneProduct(itemId)
-        .then((res)=> setProducto(res))
-        .catch((error)=> console.log(error))
-        .finally(()=> setCargando(false))
-    },[])
-    */
-
     useEffect(()=>{
         setCargando(true)
         const collectionProd = collection(db, "productos")
@@ -28,7 +18,7 @@ const ItemDetailContainer = () => {
         .catch((error)=> console.log(error))
         .finally(()=> setCargando(false))
     },[itemId])
-
+ 
     if(cargando){
         return <div className='clase-loading'> 
         <div>
@@ -38,7 +28,10 @@ const ItemDetailContainer = () => {
     }
     else{
         return(
-            <ItemDetail producto={producto}/>
+            <div>
+                <ItemDetail producto={producto}/>
+            </div>
+
         )
     }
 

@@ -8,14 +8,13 @@ import Carrito from '../carrito/Carrito'
 import { NavLink } from "react-router-dom";
 
 function Navbar1() {
-  return ( 
-    <Navbar expand="lg" className="bg-body-tertiary">
+  return (  
+    <Navbar expand="lg" className="fondoNav">
       <Container>
         <Navbar.Brand as={NavLink} to='/' ><img src={logo} alt='logo' style={{width:'7rem'}}/></Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navv">
-            <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>
-            <Nav.Link as={NavLink} to='/form'>Formulario</Nav.Link>
+            <Nav.Link as={NavLink} to='/' style={{ color: 'white' }} >Inicio</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item as={NavLink} to='/categories/Nuevos'>Nuevos</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/categories/Mas vendidos'>
@@ -33,4 +32,4 @@ function Navbar1() {
   );
 }
 
-export default Navbar1;
+export default Navbar1; 

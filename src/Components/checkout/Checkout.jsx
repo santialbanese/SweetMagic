@@ -7,9 +7,7 @@ const Checkout = () => {
     const [ValidateEmail, setValidateEmail] = useState('')
     const [user, setUser] = useState({})
     const [orderId, setOrderId] = useState('')
-    //const [feedback, setFeedBack] = useState('')
     const { cart, cartPriceTotal, clear } = useContext(CartContext)
-
     const userData = (e)=>{
         setUser(
             {
@@ -26,7 +24,6 @@ const Checkout = () => {
         }else{
             if(user.name === '' || user.email === '' || user.telephone === ''){
                 alert('Complete el formulario')
-                //setFeedBack('')
             }else{
                 let order = {
                     user,
@@ -48,15 +45,11 @@ const Checkout = () => {
                     clear()
                     
                 })
-                    
-                    //setFeedBack('Muchas gracias, nos comunicaremos con uds en breve')
             }
-        }
-        
+        }  
     }
 
     return(
-
         <div>
             {orderId !== '' ?
             <div>

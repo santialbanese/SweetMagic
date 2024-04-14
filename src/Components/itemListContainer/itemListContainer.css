@@ -1,6 +1,7 @@
 .saludos{ 
     color: black;
     text-align: center;
+    padding: 10px;
 }
 .clase-loading {
     display: flex;
@@ -11,4 +12,17 @@
 
 .clase-gift {
     width: 6rem;
+}
+.fondo{
+    background-color: #CEAB98;
+}
+.texto1{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+}
+.texto2{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400; 
 }

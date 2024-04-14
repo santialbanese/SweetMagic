@@ -8,11 +8,11 @@ const CartView = () => {
   return (
     <div>
         <div>
-            {cart.map((compra)=>{
+            {cart.map((compra)=>{ 
                 return(
                     <div className='cartViewClase' key={compra.id}>
-                       <img src={compra.imagen} alt={compra.tipo} style={{width:'8rem'}}/> 
-                       <span>{compra.tipo} {compra.opciones}</span>
+                       <img className='claseImg' src={compra.imagen} alt={compra.tipo}/> 
+                       <span>{compra.tipo}: {compra.opciones}</span>
                        <span>Cantidad(Kg): {compra.quantity}</span>
                        <span>Precio(Kg): ${compra.precio},00</span>
                        <span>Precio final: ${compra.precio * compra.quantity},00</span>

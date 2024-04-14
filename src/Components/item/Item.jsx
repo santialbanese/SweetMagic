@@ -4,7 +4,7 @@ import "./item.css"
 const Item = ({producto}) =>{
     return(
         <div className="card" style={{width: '18rem' }}>
-            <img src={producto.imagen} className="card-img-top" alt={producto.tipo}/>
+            <img src={producto.imagen} className="card-img-top imagen" alt={producto.tipo}/>
             <div className="card-body">
                 <h5 className="card-title">{producto.opciones}</h5>
                 <p className="card-text">${producto.precio}</p>

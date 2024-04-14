@@ -12,6 +12,11 @@
     border-radius: 10px;
 
 }
+.claseImg{
+  width: 150px;
+  height: 150px;
+}
+
 .total{
   font-size: 1.2rem;
   font-weight: bold;
